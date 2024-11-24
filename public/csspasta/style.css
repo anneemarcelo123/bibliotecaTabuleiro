@@ -1,19 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
  /* Definindo a paleta de cores com marrom */
  :root {
-    --brown-light: #D1A15B;  /* Marrom claro */
-    --brown-medium: #A76E3A; /* Marrom médio */
-    --brown-dark: #6E4B3B;   /* Marrom escuro */
-    --cream: #F3E1C7;        /* Creme claro */
+    --brown-light: #d15b5b;  /* Marrom claro */
+    --brown-medium: #a73a3a; /* Marrom médio */
+    --brown-dark: #813636;   /* Marrom escuro */
+    --cream: #272e44;        /* Creme claro */
+    --bs-info-bg-subtle: #032830;
+    --bgc-blue: #0000FF;
   }
 
   /* Corpo da página com fundo creme */
   body {
-    background-color: var(--cream);
-    color: var(--brown-dark);
+    background-color: #152b47;
+    color: white;
   }
 
+  *{
+    scroll-behavior: smooth;
+    font-family: 'Onest', sans-serif;
+  }
 
+  .navbar-toogler:focus{
+    border: none;
+    box-shadow: none;
+  }
 
+  .offcanvas.show:not(.hiding), .offcanvas.showing {
+    transition: all 0.3s;
+    transform: none;
+}
+
+  .offcanvas-body, .offcanvas-header{
+    background-color: #152b47;
+  }
   /* Estilos para o carrossel */
   .carousel-inner img {
     width: 100%;
@@ -26,9 +45,16 @@
     color: var(--brown-dark);
   }
 
+  .bgc-dark{
+    background-color: #152b47;
+  }
+
+  .bgc-darkest{
+    background-color: #272a2d;
+  }
   /* Cartões (cards) */
   .card {
-    border: 1px solid var(--brown-light);
+    border: 1px solid #032830;
     border-radius: 8px;
   }
 
@@ -37,11 +63,11 @@
   }
 
   .card-title {
-    color: var(--brown-medium);
+    color: white;
   }
 
   .card-text {
-    color: var(--brown-dark);
+    color: white;
   }
 
   /* Rodapé com fundo marrom */
@@ -57,3 +83,7 @@
   footer a:hover {
     color: var(--brown-light);
   }
+
+.nav-link:hover{
+  color: #4040be;
+}

@@ -8,34 +8,25 @@
 <hr>
 
   <!-- Seção de Categorias -->
-  <section id="categorias" class="bg-light py-5 my-4">
-    <div class="container">
-      <h2 class="text-center section-header mb-4">Categorias</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card text-center">
-            <div class="card-body">
-              <h5 class="card-title">Estratégia</h5>
-              <p class="card-text">Jogos que exigem raciocínio e planejamento estratégico.</p>
-            </div>
+<section class="container my-4">
+  <div class="row">
+      {{#each dados}}
+      <div class="col-md-3 mb-4">
+          <div class="card shadow-sm h-100 bgc-dark">
+              <div class="card-body">
+                  <p class="card-title"><strong>Coleção:</strong> {{dataValues.nome}}</p>
+                  <p class="card-text"><strong>Descrição:</strong> {{dataValues.descricao}}</p>
+                  <p class="card-text"><strong>Categoria:</strong> {{dataValues.categoria}}</p>
+                  <div class="d-flex justify-content-center">
+                      <a href="" class="btn btn-sm btn-primary pt-2 px-3" data-bs-toggle="modal"
+                          data-bs-target="#modal{{dataValues.id}}">Excluir</a>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card text-center">
-            <div class="card-body">
-              <h5 class="card-title">Festa</h5>
-              <p class="card-text">Jogos divertidos para grandes grupos de amigos.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card text-center">
-            <div class="card-body">
-              <h5 class="card-title">Familiares</h5>
-              <p class="card-text">Jogos para toda a família se divertir junta.</p>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
-  </section>
+
+      {{>modalDelete idItem = dataValues.id}}
+
+      {{/each}}
+  </div>
+</section>

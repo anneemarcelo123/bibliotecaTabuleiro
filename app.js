@@ -11,7 +11,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 
 //Utilizando arquivos estaticos
-app.use(express.static(path.join(__dirname,'public/')))
+app.use(express.static(path.join(__dirname,'public')))
 
 //CONFIGURANDO HANDLEBARS
 app.engine('handlebars',handlebars.engine({extended:true}))

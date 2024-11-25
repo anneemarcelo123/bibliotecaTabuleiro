@@ -1,6 +1,9 @@
-<section class="container">
-    <h1 class="text-center">Cadastro de Jogo</h1>
-    <form action="/jogo/store" method="post">
+<section class="container bgc-dark my-5">
+    <div class="d-flex justify-content-between">
+        <h1 class="text-center">Cadastro de Jogo</h1>
+        <a href="/jogo"><i class="fa-solid fa-left-long fs-2 text-white"></i></a>
+    </div>
+          <form action="/jogo/store" method="post">
         {{!-- Campo 1: Nome --}}
         <section class="mb-2">
             <label for="nome">Nome</label>
@@ -11,7 +14,7 @@
         <section class="row mb-2">
             <div class="col-md-6">
                 <label for="genero">Genero</label>
-                <input type="text" name="genero" id="genero" class="form-control"required>
+                <input type="text" name="genero" id="genero" class="form-control" required>
             </div>
 
             <div class="col-md-6">
@@ -22,7 +25,7 @@
         {{!-- Campo 1: Nome --}}
         <section class="mb-2">
             <label for="tempo_jogo">Tempo de Jogo</label>
-            <input type="time" name="tempo_jogo" id="tempo_jogo" class="form-control" required>
+            <input type="number" name="tempo_jogo" id="tempo_jogo" class="form-control" required>
         </section>
 
         <section class="mb-2">
@@ -42,8 +45,10 @@
         </section>
 
         {{!-- CAMPO 4: BOTÃO DE CADASTRAR --}}
-        <section class="mb-2 d-flex justify-content-end">
-            <button class="btn btn-primary" type="submit">Cadastrar</button>
+        <section class="mb-2 d-flex justify-content-center my-5">
+            <button class="btn btn-primary py-2 px-5" type="submit">Cadastrar</button>
         </section>
     </form>
+   
+
 </section>

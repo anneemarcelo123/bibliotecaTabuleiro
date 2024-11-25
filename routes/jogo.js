@@ -19,7 +19,7 @@ router.post('/store',async(req, res)=>{
     })  
 
     if(resultado){
-        res.redirect('/')
+        res.redirect('/jogo')
     }
     else{
         res.json({erro:"Não foi possível cadastrar os dados"})
@@ -53,7 +53,7 @@ router.get('/destroy/:id',async(req, res)=>{
             id:req.params.id// estamos recebendo o id via parâmetro que está sendo passado na rota, no caso, é o :id que estamos recebendo.
         }
     })
-    res.redirect('/')
+    res.redirect('/jogo')
 })
 
 //5ª ROTA - EXIBIR FORMULÁRIO DE CADASTRO

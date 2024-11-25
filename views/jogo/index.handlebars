@@ -7,23 +7,27 @@
 
 <hr>
   <!-- Seção de Categorias -->
-  <section id="categorias" class="py-5 my-4">
-    <div class="container">
-      <h2 class="text-center text-white mb-4">Jogos</h2>
-      <div class="row">
-        <div class="col-md-4 d-flex">
-            {{#each dados}}
-          <div class="card text-center">
-            <div class="card-body">
-              <h5 class="card-title">{{dataValues.nome}}</h5>
-              <p class="card-text">Gênero: {{dataValues.genero}}</p>
-              <p class="card-text">Coleção: {{colecao.dataValues.nome}}</p>
-              <p class="card-text">Número de Jogadores: {{dataValues.num_jogadores}}</p>
-              <p class="card-text">Descrição: {{dataValues.descricao}}</p>
-            </div>
+<section class="container my-4">
+  <div class="row">
+      {{#each dados}}
+      <div class="col-md-3 mb-4">
+          <div class="card shadow-sm h-100 bgc-dark">
+              <div class="card-body">
+                  <p class="card-title"><strong>Jogo:</strong> {{dataValues.nome}}</p>
+                  <p class="card-text"><strong>Gênero:</strong> {{dataValues.genero}}</p>
+                  <p class="card-text"><strong>Jogadores:</strong> {{dataValues.num_jogadores}} jogadores</p>
+                  <p class="card-text"><strong>Tempo:</strong> {{dataValues.tempo}} minutos</p>
+                  <p class="card-text"><strong>Descrição:</strong> {{dataValues.descricao}}</p>
+                  <div class="d-flex justify-content-center">
+                      <a href="" class="btn btn-sm btn-primary pt-2 px-3" data-bs-toggle="modal"
+                          data-bs-target="#modal{{dataValues.id}}">Excluir</a>
+                  </div>
+              </div>
           </div>
-          {{/each}}
-        </div>
       </div>
-    </div>
-  </section>
+
+      {{>modalDeleteJogo idItem = dataValues.id}}
+
+      {{/each}}
+  </div>
+</section>
